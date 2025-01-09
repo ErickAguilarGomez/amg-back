@@ -26,7 +26,7 @@ class SpInsertTransactions extends Migration
 	
 	    REPEAT
 
-		SET transaction_clientid=JSON_UNQUOTE(JSON_EXTRACT(transactions_array, CONCAT('$[', i, '].clientId')));
+		SET transaction_clientid=JSON_UNQUOTE(JSON_EXTRACT(transactions_array, CONCAT('$[', i, '].clientID')));
 		SET transaction_amount=JSON_UNQUOTE(JSON_EXTRACT(transactions_array, CONCAT('$[', i, '].amount')));
 		SET transactions_date=JSON_UNQUOTE(JSON_EXTRACT(transactions_array, CONCAT('$[', i, '].date')));
 
